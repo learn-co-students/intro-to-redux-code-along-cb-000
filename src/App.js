@@ -10,7 +10,7 @@ class App extends Component {
           <h2>Welcome to React Shopping List</h2>
         </div>
         <ShoppingList items={this.props.shoppingListItems} />
-      </div>
+      </div >
     );
   }
 }
