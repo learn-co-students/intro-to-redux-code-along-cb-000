@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux';
+import ShoppingList from './ShoppingList';
 import logo from './logo.svg';
 import './App.css';
 
@@ -14,5 +16,14 @@ class App extends Component {
     );
   }
 }
+
+function mapStateToProps(state) {
+  return {shoppingListItems: state.shoppingListItems}
+}
+
+const connector = connect()
+const connectedComponent = connector(App)
+ 
+export default connectedComponent;
 
 export default App;
